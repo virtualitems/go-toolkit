@@ -1,0 +1,276 @@
+Download and install — https://go.dev/doc/install
+Tutorial: Get started with Go — https://go.dev/doc/tutorial/getting-started
+Comments — https://go.dev/ref/spec#Comments
+Go Doc Comments — https://go.dev/doc/comment
+What's in a name? — https://go.dev/talks/2014/names.slide
+go fmt your code — https://go.dev/blog/gofmt
+Diagnostics — https://go.dev/doc/diagnostics
+Go by Example: Values — https://gobyexample.com/values
+A Tour of Go: Basic types — https://go.dev/tour/basics/11
+Go by Example: Variables — https://gobyexample.com/variables
+A Tour of Go: Zero values — https://go.dev/tour/basics/12
+A Tour of Go: Constants — https://go.dev/tour/basics/15
+A Tour of Go: Type conversions — https://go.dev/tour/basics/13
+Package fmt — https://pkg.go.dev/fmt
+Package math — https://pkg.go.dev/math
+Common Operators — https://go101.org/article/operators.html
+Go by Example: If/Else — https://gobyexample.com/if-else
+Go by Example: For — https://gobyexample.com/for
+Go by Example: Switch — https://gobyexample.com/switch
+Basic Control Flows — https://go101.org/article/control-flows.html
+Code Blocks and Identifier Scopes — https://go101.org/article/blocks-and-scopes.html
+Go by Example: Functions — https://gobyexample.com/functions
+A Tour of Go: Multiple results — https://go.dev/tour/basics/6
+A Tour of Go: Named return values — https://go.dev/tour/basics/7
+Go by Example: Variadic Functions — https://gobyexample.com/variadic-functions
+A Tour of Go: Function closures — https://go.dev/tour/moretypes/25
+Go by Example: Recursion — https://gobyexample.com/recursion
+Package math/rand/v2 — https://pkg.go.dev/math/rand/v2
+Go by Example: Arrays — https://gobyexample.com/arrays
+Go by Example: Slices — https://gobyexample.com/slices
+Go by Example: Maps — https://gobyexample.com/maps
+Go by Example: Strings and Runes — https://gobyexample.com/strings-and-runes
+Go by Example: Range over Built-in Types — https://gobyexample.com/range-over-built-in-types
+Package sort — https://pkg.go.dev/sort
+Strings, bytes, runes and characters in Go — https://go.dev/blog/strings
+Package strings — https://pkg.go.dev/strings
+Package strconv — https://pkg.go.dev/strconv
+Package unicode — https://pkg.go.dev/unicode
+Package unicode/utf8 — https://pkg.go.dev/unicode/utf8
+Package regexp — https://pkg.go.dev/regexp
+Go by Example: Pointers — https://gobyexample.com/pointers
+Go Slices: Usage and Internals — https://go.dev/blog/slices-intro
+Package bytes — https://pkg.go.dev/bytes
+Go by Example: Structs — https://gobyexample.com/structs
+Go maps in action — https://go.dev/blog/maps
+Go by Example: Methods — https://gobyexample.com/methods
+Pointer receivers — https://go.dev/tour/methods/4
+Go by Example: Struct Embedding — https://gobyexample.com/struct-embedding
+Go by Example: Interfaces — https://gobyexample.com/interfaces
+A Tour of Go: Type switches — https://go.dev/tour/methods/16
+Go by Example: Enums — https://gobyexample.com/enums
+Go’s Declaration Syntax — https://go.dev/blog/declaration-syntax
+Go by Example: Errors — https://gobyexample.com/errors
+Go by Example: Custom Errors — https://gobyexample.com/custom-errors
+Error Handling and Go — https://go.dev/blog/error-handling-and-go
+Package errors — https://pkg.go.dev/errors
+Go by Example: Defer — https://gobyexample.com/defer
+Go by Example: Panic — https://gobyexample.com/panic
+Go by Example: Recover — https://gobyexample.com/recover
+Defer, Panic, and Recover — https://go.dev/blog/defer-panic-and-recover
+Tutorial: Create a Go module — https://go.dev/doc/tutorial/create-module
+Tutorial: Call your code from another module — https://go.dev/doc/tutorial/call-module-code
+Tutorial: Return and handle an error — https://go.dev/doc/tutorial/handle-errors
+Tutorial: Return a random greeting — https://go.dev/doc/tutorial/random-greeting
+Tutorial: Return greetings for multiple people — https://go.dev/doc/tutorial/greetings-multiple-people
+Tutorial: Add a test — https://go.dev/doc/tutorial/add-a-test
+Tutorial: Compile and install the application — https://go.dev/doc/tutorial/compile-install
+How to Write Go Code — https://go.dev/doc/code
+Command go — https://pkg.go.dev/cmd/go
+Managing Dependencies — https://go.dev/doc/modules/managing-dependencies
+go.mod File Reference — https://go.dev/doc/modules/gomod-ref
+Go Modules Reference — https://go.dev/ref/mod
+Organizing a Go module — https://go.dev/doc/modules/layout
+Tutorial: Getting started with multi-module workspaces — https://go.dev/doc/tutorial/workspaces
+Go by Example: Testing and Benchmarking — https://gobyexample.com/testing-and-benchmarking
+Package testing — https://pkg.go.dev/testing
+Getting Started with Delve — https://github.com/go-delve/delve/blob/master/Documentation/cli/getting_started.md
+Using Delve — https://github.com/go-delve/delve/blob/master/Documentation/usage/README.md
+Tutorial: Getting started with generics — https://go.dev/doc/tutorial/generics
+Package cmp — https://pkg.go.dev/cmp
+Package slices — https://pkg.go.dev/slices
+Package maps — https://pkg.go.dev/maps
+Package container/heap — https://pkg.go.dev/container/heap
+Package unique — https://pkg.go.dev/unique
+When To Use Generics — https://go.dev/blog/when-generics
+Generic Interfaces — https://go.dev/blog/generic-interfaces
+Go by Example: Range over Iterators — https://gobyexample.com/range-over-iterators
+Range Over Function Types — https://go.dev/blog/range-functions
+Package iter — https://pkg.go.dev/iter
+Package io — https://pkg.go.dev/io
+Package bufio — https://pkg.go.dev/bufio
+Package os — https://pkg.go.dev/os
+Package os/user — https://pkg.go.dev/os/user
+Package io/fs — https://pkg.go.dev/io/fs
+Package path — https://pkg.go.dev/path
+Package path/filepath — https://pkg.go.dev/path/filepath
+Go by Example: Line Filters — https://gobyexample.com/line-filters
+Go by Example: Reading Files — https://gobyexample.com/reading-files
+Go by Example: Writing Files — https://gobyexample.com/writing-files
+Go by Example: File Paths — https://gobyexample.com/file-paths
+Go by Example: Directories — https://gobyexample.com/directories
+Go by Example: Temporary Files and Directories — https://gobyexample.com/temporary-files-and-directories
+Package embed — https://pkg.go.dev/embed
+Package archive/tar — https://pkg.go.dev/archive/tar
+Package archive/zip — https://pkg.go.dev/archive/zip
+Package compress/gzip — https://pkg.go.dev/compress/gzip
+Package text/template — https://pkg.go.dev/text/template
+Package golang.org/x/text/encoding — https://pkg.go.dev/golang.org/x/text/encoding
+Package golang.org/x/text/unicode/norm — https://pkg.go.dev/golang.org/x/text/unicode/norm
+Package github.com/rivo/uniseg — https://pkg.go.dev/github.com/rivo/uniseg
+Package golang.org/x/text/language — https://pkg.go.dev/golang.org/x/text/language
+Package golang.org/x/text/message — https://pkg.go.dev/golang.org/x/text/message
+Package golang.org/x/text/collate — https://pkg.go.dev/golang.org/x/text/collate
+Package encoding/hex — https://pkg.go.dev/encoding/hex
+Package encoding/binary — https://pkg.go.dev/encoding/binary
+Package math/bits — https://pkg.go.dev/math/bits
+Package math/big — https://pkg.go.dev/math/big
+Package encoding/base64 — https://pkg.go.dev/encoding/base64
+Package encoding/base32 — https://pkg.go.dev/encoding/base32
+Package encoding/ascii85 — https://pkg.go.dev/encoding/ascii85
+Package encoding/csv — https://pkg.go.dev/encoding/csv
+Package encoding/gob — https://pkg.go.dev/encoding/gob
+Package encoding/xml — https://pkg.go.dev/encoding/xml
+Go by Example: Command-Line Arguments — https://gobyexample.com/command-line-arguments
+Package flag — https://pkg.go.dev/flag
+Go by Example: Command-Line Flags — https://gobyexample.com/command-line-flags
+Go by Example: Command-Line Subcommands — https://gobyexample.com/command-line-subcommands
+Package golang.org/x/term — https://pkg.go.dev/golang.org/x/term
+Go by Example: Environment Variables — https://gobyexample.com/environment-variables
+Package os/exec — https://pkg.go.dev/os/exec
+Go by Example: Spawning Processes — https://gobyexample.com/spawning-processes
+Go by Example: Exec’ing Processes — https://gobyexample.com/execing-processes
+Package os/signal — https://pkg.go.dev/os/signal
+Go by Example: Signals — https://gobyexample.com/signals
+Go by Example: Exit — https://gobyexample.com/exit
+Package time — https://pkg.go.dev/time
+Go by Example: Time Formatting / Parsing — https://gobyexample.com/time-formatting-parsing
+Package log — https://pkg.go.dev/log
+Structured Logging with slog — https://go.dev/blog/slog
+Package log/slog — https://pkg.go.dev/log/slog
+Concurrency is not parallelism — https://go.dev/blog/waza-talk
+Go by Example: Goroutines — https://gobyexample.com/goroutines
+Go by Example: Channels — https://gobyexample.com/channels
+Go by Example: Channel Buffering — https://gobyexample.com/channel-buffering
+Go by Example: Channel Synchronization — https://gobyexample.com/channel-synchronization
+Go by Example: Channel Directions — https://gobyexample.com/channel-directions
+Go by Example: Select — https://gobyexample.com/select
+Go by Example: Non-Blocking Channel Operations — https://gobyexample.com/non-blocking-channel-operations
+Go by Example: Closing Channels — https://gobyexample.com/closing-channels
+Go by Example: Range over Channels — https://gobyexample.com/range-over-channels
+Go by Example: Timers — https://gobyexample.com/timers
+Go by Example: Tickers — https://gobyexample.com/tickers
+Go by Example: Timeouts — https://gobyexample.com/timeouts
+Go by Example: WaitGroups — https://gobyexample.com/waitgroups
+Go by Example: Mutexes — https://gobyexample.com/mutexes
+Package sync — https://pkg.go.dev/sync
+Go by Example: Worker Pools — https://gobyexample.com/worker-pools
+Go by Example: Rate Limiting — https://gobyexample.com/rate-limiting
+Go by Example: Atomic Counters — https://gobyexample.com/atomic-counters
+Package sync/atomic — https://pkg.go.dev/sync/atomic
+Go by Example: Stateful Goroutines — https://gobyexample.com/stateful-goroutines
+Package context — https://pkg.go.dev/context
+Go Concurrency Patterns: Timing Out, Moving On — https://go.dev/blog/concurrency-timeouts
+Go Concurrency Patterns: Pipelines and Cancellation — https://go.dev/blog/pipelines
+Package golang.org/x/sync/errgroup — https://pkg.go.dev/golang.org/x/sync/errgroup
+The Go Memory Model — https://go.dev/ref/mem
+Data Race Detector — https://go.dev/doc/articles/race_detector
+Package testing/synctest — https://pkg.go.dev/testing/synctest
+Effective Go — https://go.dev/doc/effective_go
+Go Code Review Comments — https://go.dev/wiki/CodeReviewComments
+The Go Programming Language Specification — https://go.dev/ref/spec
+Package encoding/json — https://pkg.go.dev/encoding/json
+Tutorial: Working with JSON — https://go.dev/doc/tutorial/json
+Package encoding/json/v2 — https://pkg.go.dev/encoding/json/v2
+encoding/json/v2 Migration Guide — https://go.dev/doc/jsonv2-migration
+Package net — https://pkg.go.dev/net
+Package net/netip — https://pkg.go.dev/net/netip
+Package net/url — https://pkg.go.dev/net/url
+Go by Example: HTTP Client — https://gobyexample.com/http-client
+Go by Example: HTTP Server — https://gobyexample.com/http-server
+Package html — https://pkg.go.dev/html
+Package html/template — https://pkg.go.dev/html/template
+Writing Web Applications — https://go.dev/doc/articles/wiki/
+Package net/http — https://pkg.go.dev/net/http
+Package mime — https://pkg.go.dev/mime
+Package mime/multipart — https://pkg.go.dev/mime/multipart
+Tutorial: Developing a RESTful API with Go and Gin — https://go.dev/doc/tutorial/web-service-gin
+Go by Example: TCP Server — https://gobyexample.com/tcp-server
+Package hash — https://pkg.go.dev/hash
+Package crypto — https://pkg.go.dev/crypto
+Package crypto/rand — https://pkg.go.dev/crypto/rand
+Package uuid — https://pkg.go.dev/uuid
+Package crypto/sha256 — https://pkg.go.dev/crypto/sha256
+Package crypto/sha512 — https://pkg.go.dev/crypto/sha512
+Package crypto/hmac — https://pkg.go.dev/crypto/hmac
+Package crypto/cipher — https://pkg.go.dev/crypto/cipher
+Package crypto/aes — https://pkg.go.dev/crypto/aes
+Package encoding/asn1 — https://pkg.go.dev/encoding/asn1
+Package crypto/rsa — https://pkg.go.dev/crypto/rsa
+Package crypto/ecdsa — https://pkg.go.dev/crypto/ecdsa
+Package crypto/x509 — https://pkg.go.dev/crypto/x509
+Package encoding/pem — https://pkg.go.dev/encoding/pem
+Package crypto/tls — https://pkg.go.dev/crypto/tls
+Package net/mail — https://pkg.go.dev/net/mail
+Package net/smtp — https://pkg.go.dev/net/smtp
+Introduction to gRPC — https://grpc.io/docs/what-is-grpc/introduction/
+Core concepts, architecture and lifecycle — https://grpc.io/docs/what-is-grpc/core-concepts/
+Language Guide (proto 3) — https://protobuf.dev/programming-guides/proto3/
+Go Generated Code Guide (Open) — https://protobuf.dev/reference/go/go-generated/
+Quick start: gRPC in Go — https://grpc.io/docs/languages/go/quickstart/
+Basics tutorial: gRPC in Go — https://grpc.io/docs/languages/go/basics/
+Package google.golang.org/grpc — https://pkg.go.dev/google.golang.org/grpc
+Tutorial: Accessing a relational database — https://go.dev/doc/tutorial/database-access
+Package database/sql — https://pkg.go.dev/database/sql
+Opening a Database Handle — https://go.dev/doc/database/open-handle
+Querying for Data — https://go.dev/doc/database/querying
+Executing SQL Statements That Don’t Return Data — https://go.dev/doc/database/change-data
+Using Prepared Statements — https://go.dev/doc/database/prepared-statements
+Executing Transactions — https://go.dev/doc/database/execute-transactions
+Canceling In-Progress Operations — https://go.dev/doc/database/cancel-operations
+Managing Connections — https://go.dev/doc/database/manage-connections
+Avoiding SQL Injection Risk — https://go.dev/doc/database/sql-injection
+Strategy in Go — https://refactoring.guru/design-patterns/strategy/go/example
+Factory Method in Go — https://refactoring.guru/design-patterns/factory-method/go/example
+Builder in Go — https://refactoring.guru/design-patterns/builder/go/example
+Singleton in Go — https://refactoring.guru/design-patterns/singleton/go/example
+Adapter in Go — https://refactoring.guru/design-patterns/adapter/go/example
+Facade in Go — https://refactoring.guru/design-patterns/facade/go/example
+Decorator in Go — https://refactoring.guru/design-patterns/decorator/go/example
+Composite in Go — https://refactoring.guru/design-patterns/composite/go/example
+Proxy in Go — https://refactoring.guru/design-patterns/proxy/go/example
+Observer in Go — https://refactoring.guru/design-patterns/observer/go/example
+State in Go — https://refactoring.guru/design-patterns/state/go/example
+Command in Go — https://refactoring.guru/design-patterns/command/go/example
+Chain of Responsibility in Go — https://refactoring.guru/design-patterns/chain-of-responsibility/go/example
+Iterator in Go — https://refactoring.guru/design-patterns/iterator/go/example
+Template Method in Go — https://refactoring.guru/design-patterns/template-method/go/example
+Prototype in Go — https://refactoring.guru/design-patterns/prototype/go/example
+Abstract Factory in Go — https://refactoring.guru/design-patterns/abstract-factory/go/example
+Bridge in Go — https://refactoring.guru/design-patterns/bridge/go/example
+Flyweight in Go — https://refactoring.guru/design-patterns/flyweight/go/example
+Memento in Go — https://refactoring.guru/design-patterns/memento/go/example
+Mediator in Go — https://refactoring.guru/design-patterns/mediator/go/example
+Visitor in Go — https://refactoring.guru/design-patterns/visitor/go/example
+Managing Module Source — https://go.dev/doc/modules/managing-source
+Module Version Numbering — https://go.dev/doc/modules/version-numbers
+Module Release and Versioning Workflow — https://go.dev/doc/modules/release-workflow
+Publishing a Module — https://go.dev/doc/modules/publishing
+Developing a Major Version Update — https://go.dev/doc/modules/major-version
+Keeping Your Modules Compatible — https://go.dev/blog/module-compatibility
+Tutorial: Getting started with fuzzing — https://go.dev/doc/tutorial/fuzz
+Go Fuzzing — https://go.dev/doc/security/fuzz/
+Coverage Profiling Support for Integration Tests — https://go.dev/doc/build-cover
+Tutorial: Find and fix vulnerable dependencies with govulncheck — https://go.dev/doc/tutorial/govulncheck
+Security Best Practices for Go Developers — https://go.dev/doc/security/best-practices
+Package go/token — https://pkg.go.dev/go/token
+Package go/scanner — https://pkg.go.dev/go/scanner
+Package go/parser — https://pkg.go.dev/go/parser
+Package go/ast — https://pkg.go.dev/go/ast
+Package go/types — https://pkg.go.dev/go/types
+Package golang.org/x/tools/go/packages — https://pkg.go.dev/golang.org/x/tools/go/packages
+The Laws of Reflection — https://go.dev/blog/laws-of-reflection
+Package reflect — https://pkg.go.dev/reflect
+Package unsafe — https://pkg.go.dev/unsafe
+Package runtime — https://pkg.go.dev/runtime
+Profiling Go Programs — https://go.dev/blog/pprof
+Package runtime/pprof — https://pkg.go.dev/runtime/pprof
+Package runtime/trace — https://pkg.go.dev/runtime/trace
+A Guide to the Go Garbage Collector — https://go.dev/doc/gc-guide
+Package weak — https://pkg.go.dev/weak
+Profile-guided Optimization — https://go.dev/doc/pgo
+Go Runtime Hacking — https://go.dev/src/runtime/HACKING
+Package golang.org/x/sys/unix — https://pkg.go.dev/golang.org/x/sys/unix
+C? Go? Cgo! — https://go.dev/blog/cgo
+Package plugin — https://pkg.go.dev/plugin
+A Quick Guide to Go's Assembler — https://go.dev/doc/asm
