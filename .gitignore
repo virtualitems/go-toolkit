@@ -1,0 +1,35 @@
+# Personal
+/.credentials
+/.ignore
+/.vscode
+/.todo
+/.worktree
+
+# Knowledge
+/.wiki
+/.example
+/.examples
+
+# AI
+/.agents/skills
+/.claude/skills
+/.codex/skills
+/.opencode/skills
+
+# SQLite database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+
+# Temporals
+.temp
+.tmp
+
+# Environment
+.env
+.env.keys
+.env.local
+.env.*.local
