@@ -65,10 +65,6 @@ func (c *Cache) add(key, value string) {
 	c.storage[key] = value
 }
 
-func (c *Cache) get(key string) {
-	delete(c.storage, key)
-}
-
 func (c *Cache) evict() {
 	c.evictionAlgo.evict(c)
 	c.capacity--

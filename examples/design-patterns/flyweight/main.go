@@ -2,117 +2,42 @@ package main
 
 import "fmt"
 
-// ---
-
-const (
-	TerroristDressType        = "tDress"
-	CounterTerroristDressType = "ctDress"
-)
-
-// ---
-
-type Dress interface {
-	getColor() string
+type Coffee struct {
+	name  string
+	price int
 }
 
-// ---
-
-type TerroristDress struct {
-	color string
+type Order struct {
+	customer string
+	table    int
+	coffee   *Coffee
 }
 
-func (t *TerroristDress) getColor() string {
-	return t.color
+func (o *Order) print() {
+	fmt.Printf(
+		"%s pidió %s en la mesa %d por $%d\n",
+		o.customer,
+		o.coffee.name,
+		o.table,
+		o.coffee.price,
+	)
 }
-
-// ---
-
-type CounterTerroristDress struct {
-	color string
-}
-
-func (c *CounterTerroristDress) getColor() string {
-	return c.color
-}
-
-// ---
-
-type DressFactory struct {
-	dressMap map[string]Dress
-}
-
-var dressFactoryInstance = &DressFactory{
-	dressMap: make(map[string]Dress),
-}
-
-func (d *DressFactory) getDressByType(dressType string) (Dress, error) {
-	if d.dressMap[dressType] != nil {
-		return d.dressMap[dressType], nil
-	}
-	if dressType == TerroristDressType {
-		d.dressMap[dressType] = &TerroristDress{color: "red"}
-		return d.dressMap[dressType], nil
-	}
-	if dressType == CounterTerroristDressType {
-		d.dressMap[dressType] = &CounterTerroristDress{color: "green"}
-		return d.dressMap[dressType], nil
-	}
-	return nil, fmt.Errorf("Wrong dress type passed")
-}
-
-// ---
-
-type Player struct {
-	dress      Dress
-	playerType string
-	lat        int
-	long       int
-}
-
-func newPlayer(playerType, dressType string) *Player {
-	dress, _ := dressFactoryInstance.getDressByType(dressType)
-	return &Player{playerType: playerType, dress: dress}
-}
-
-func (p *Player) newLocation(lat, long int) {
-	p.lat = lat
-	p.long = long
-}
-
-// ---
-
-type Game struct {
-	terrorists        []*Player
-	counterTerrorists []*Player
-}
-
-func newGame() *Game {
-	return &Game{}
-}
-
-func (g *Game) addTerrorist(dressType string) {
-	g.terrorists = append(g.terrorists, newPlayer("T", dressType))
-}
-
-func (g *Game) addCounterTerrorist(dressType string) {
-	g.counterTerrorists = append(g.counterTerrorists, newPlayer("CT", dressType))
-}
-
-// ---
 
 func main() {
-	g := newGame()
+	coffeeWithMilk := &Coffee{name: "Café con leche", price: 5000}
+	chocolate := &Coffee{name: "Chocolate", price: 6000}
 
-	g.addTerrorist(TerroristDressType)
-	g.addTerrorist(TerroristDressType)
-	g.addTerrorist(TerroristDressType)
-	g.addTerrorist(TerroristDressType)
-
-	g.addCounterTerrorist(CounterTerroristDressType)
-	g.addCounterTerrorist(CounterTerroristDressType)
-	g.addCounterTerrorist(CounterTerroristDressType)
-
-	for dressType, dress := range dressFactoryInstance.dressMap {
-		fmt.Printf("DressColorType: %s\nDressColor: %s\n", dressType, dress.getColor())
+	orders := []*Order{
+		{customer: "Ana", table: 1, coffee: coffeeWithMilk},
+		{customer: "Luis", table: 2, coffee: coffeeWithMilk},
+		{customer: "Marta", table: 3, coffee: chocolate},
 	}
+
+	for _, order := range orders {
+		order.print()
+	}
+
+	fmt.Printf("\nPedidos creados: %d\n", len(orders))
+	fmt.Println("Cafés creados: 2")
+	fmt.Printf("Ana y Luis comparten el mismo objeto Coffee: %t\n", orders[0].coffee == orders[1].coffee)
 }

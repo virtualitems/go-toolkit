@@ -1,160 +1,69 @@
 package main
 
-import (
-	"fmt"
-	"log"
-)
+import "fmt"
 
-// ---
+type Lights struct{}
 
-type Account struct {
-	name string
+func (l *Lights) TurnOff() {
+	fmt.Println("Luces apagadas")
 }
 
-func newAccount(accountName string) *Account {
-	return &Account{name: accountName}
+func (l *Lights) TurnOn() {
+	fmt.Println("Luces encendidas")
 }
 
-func (a *Account) checkAccount(accountName string) error {
-	if a.name != accountName {
-		return fmt.Errorf("Account Name is incorrect")
+type Projector struct{}
+
+func (p *Projector) TurnOn() {
+	fmt.Println("Proyector encendido")
+}
+
+func (p *Projector) TurnOff() {
+	fmt.Println("Proyector apagado")
+}
+
+type SoundSystem struct{}
+
+func (s *SoundSystem) TurnOn() {
+	fmt.Println("Sistema de sonido encendido")
+}
+
+func (s *SoundSystem) TurnOff() {
+	fmt.Println("Sistema de sonido apagado")
+}
+
+type HomeTheaterFacade struct {
+	lights      *Lights
+	projector   *Projector
+	soundSystem *SoundSystem
+}
+
+func NewHomeTheater() *HomeTheaterFacade {
+	return &HomeTheaterFacade{
+		lights:      &Lights{},
+		projector:   &Projector{},
+		soundSystem: &SoundSystem{},
 	}
-	fmt.Println("Account Verified")
-	return nil
 }
 
-// ---
-
-type SecurityCode struct {
-	code int
+func (h *HomeTheaterFacade) WatchMovie() {
+	h.lights.TurnOff()
+	h.projector.TurnOn()
+	h.soundSystem.TurnOn()
+	fmt.Println("Película iniciada")
 }
 
-func newSecurityCode(code int) *SecurityCode {
-	return &SecurityCode{code: code}
+func (h *HomeTheaterFacade) EndMovie() {
+	h.projector.TurnOff()
+	h.soundSystem.TurnOff()
+	h.lights.TurnOn()
+	fmt.Println("Película terminada")
 }
-
-func (s *SecurityCode) checkCode(incomingCode int) error {
-	if s.code != incomingCode {
-		return fmt.Errorf("Security Code is incorrect")
-	}
-	fmt.Println("SecurityCode Verified")
-	return nil
-}
-
-// ---
-
-type Wallet struct {
-	balance int
-}
-
-func newWallet() *Wallet {
-	return &Wallet{balance: 0}
-}
-
-func (w *Wallet) creditBalance(amount int) {
-	w.balance += amount
-	fmt.Println("Wallet balance added successfully")
-}
-
-func (w *Wallet) debitBalance(amount int) error {
-	if w.balance < amount {
-		return fmt.Errorf("Balance is not sufficient")
-	}
-	fmt.Println("Wallet balance is Sufficient")
-	w.balance -= amount
-	return nil
-}
-
-// ---
-
-type Ledger struct {
-}
-
-func (s *Ledger) makeEntry(accountID, txnType string, amount int) {
-	fmt.Printf("Make ledger entry for accountId %s with txnType %s for amount %d\n", accountID, txnType, amount)
-}
-
-// ---
-
-type Notification struct {
-}
-
-func (n *Notification) sendWalletCreditNotification() {
-	fmt.Println("Sending wallet credit notification")
-}
-
-func (n *Notification) sendWalletDebitNotification() {
-	fmt.Println("Sending wallet debit notification")
-}
-
-// ---
-
-type WalletFacade struct {
-	account      *Account
-	wallet       *Wallet
-	securityCode *SecurityCode
-	notification *Notification
-	ledger       *Ledger
-}
-
-func newWalletFacade(accountID string, code int) *WalletFacade {
-	fmt.Println("Starting create account")
-	w := &WalletFacade{
-		account:      newAccount(accountID),
-		securityCode: newSecurityCode(code),
-		wallet:       newWallet(),
-		notification: &Notification{},
-		ledger:       &Ledger{},
-	}
-	fmt.Println("Account created")
-	return w
-}
-
-func (w *WalletFacade) addMoneyToWallet(accountID string, securityCode int, amount int) error {
-	fmt.Println("Starting add money to wallet")
-	if err := w.account.checkAccount(accountID); err != nil {
-		return err
-	}
-	if err := w.securityCode.checkCode(securityCode); err != nil {
-		return err
-	}
-	w.wallet.creditBalance(amount)
-	w.notification.sendWalletCreditNotification()
-	w.ledger.makeEntry(accountID, "credit", amount)
-	return nil
-}
-
-func (w *WalletFacade) deductMoneyFromWallet(accountID string, securityCode int, amount int) error {
-	fmt.Println("Starting debit money from wallet")
-	if err := w.account.checkAccount(accountID); err != nil {
-		return err
-	}
-	if err := w.securityCode.checkCode(securityCode); err != nil {
-		return err
-	}
-	if err := w.wallet.debitBalance(amount); err != nil {
-		return err
-	}
-	w.notification.sendWalletDebitNotification()
-	w.ledger.makeEntry(accountID, "debit", amount)
-	return nil
-}
-
-// ---
 
 func main() {
-	fmt.Println()
-	walletFacade := newWalletFacade("abc", 1234)
-	fmt.Println()
+	homeTheater := NewHomeTheater()
 
-	err := walletFacade.addMoneyToWallet("abc", 1234, 10)
-	if err != nil {
-		log.Fatalf("Error: %s\n", err.Error())
-	}
-
+	homeTheater.WatchMovie()
 	fmt.Println()
-	err = walletFacade.deductMoneyFromWallet("abc", 1234, 5)
-	if err != nil {
-		log.Fatalf("Error: %s\n", err.Error())
-	}
+	homeTheater.EndMovie()
 }
