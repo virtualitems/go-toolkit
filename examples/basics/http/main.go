@@ -4,11 +4,20 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"strconv"
 )
+
+// type Response struct {
+// 	status     int
+// 	statusText string
+// 	headers    http.Header
+// 	body       []byte
+// }
 
 type HealthHandler struct{}
 
 func (HealthHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Length", "0")
 	w.WriteHeader(http.StatusNoContent)
 }
 
@@ -24,11 +33,19 @@ type Routes struct {
 type EchoHandler struct{}
 
 func (EchoHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	responseBytes, readError := io.ReadAll(r.Body)
+	if readError != nil {
+		w.Header().Set("Content-Length", "0")
+		w.WriteHeader(http.StatusBadRequest)
+		return
+	}
+
+	w.Header().Set("Content-Length", strconv.Itoa(len(responseBytes)))
 	w.WriteHeader(http.StatusOK)
 
-	_, copyError := io.Copy(w, r.Body)
-	if copyError != nil {
-		os.Exit(1)
+	_, writeError := w.Write(responseBytes)
+	if writeError != nil {
+		return
 	}
 }
 
@@ -37,12 +54,13 @@ type ColorsIndexHandler struct{}
 func (ColorsIndexHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	responseBytes := []byte("index")
 
-	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+	w.Header().Set("Content-Length", strconv.Itoa(len(responseBytes)))
 	w.WriteHeader(http.StatusOK)
 
 	_, writeError := w.Write(responseBytes)
 	if writeError != nil {
-		os.Exit(1)
+		return
 	}
 }
 
@@ -51,12 +69,13 @@ type ColorsCreateHandler struct{}
 func (ColorsCreateHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	responseBytes := []byte("create")
 
-	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+	w.Header().Set("Content-Length", strconv.Itoa(len(responseBytes)))
 	w.WriteHeader(http.StatusOK)
 
 	_, writeError := w.Write(responseBytes)
 	if writeError != nil {
-		os.Exit(1)
+		return
 	}
 }
 
@@ -65,30 +84,34 @@ type ColorShowHandler struct{}
 func (ColorShowHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	responseBytes := []byte("show")
 
-	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+	w.Header().Set("Content-Length", strconv.Itoa(len(responseBytes)))
 	w.WriteHeader(http.StatusOK)
 
 	_, writeError := w.Write(responseBytes)
 	if writeError != nil {
-		os.Exit(1)
+		return
 	}
 }
 
 type ColorsStoreHandler struct{}
 
 func (ColorsStoreHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Length", "0")
 	w.WriteHeader(http.StatusNoContent)
 }
 
 type ColorUpdateHandler struct{}
 
 func (ColorUpdateHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Length", "0")
 	w.WriteHeader(http.StatusNoContent)
 }
 
 type ColorDestroyHandler struct{}
 
 func (ColorDestroyHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Length", "0")
 	w.WriteHeader(http.StatusNoContent)
 }
 
